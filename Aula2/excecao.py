@@ -34,9 +34,15 @@
 # criar um campo de login onde o login com a palavra policial é proibida
 # é gerado um erro NameError
 
+while True:
+    try:
+        login = input('Digite o login: ')
 
-login = input('Digite o login: ')
-if login.title() == 'Policial':
-    raise NameError('policial é uma palavra proibida')
-else:
-    print(f'Bem vindo {login}, acesso permitido')
+        if login.title() == 'Policial':
+            raise NameError('policial é uma palavra proibida')
+        else:
+            print(f'Bem vindo {login}, acesso permitido')
+            break
+    except NameError as e:
+        print(e)
+        continue
