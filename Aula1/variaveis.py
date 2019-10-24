@@ -18,3 +18,4 @@ curso = input('Digite o nome do curso: ')
 
 print(f'Olá, seja bem vindo {nome}, ao curso {curso}')
 
+#test
